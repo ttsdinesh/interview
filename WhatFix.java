@@ -26,8 +26,10 @@ public class WhatFix {
 	}
 
 	private static void kFreq(final String s, final int k) {
-		if (s == null || s.length() < 1 || k < 1)
+		if (s == null || s.length() < 1 || k < 1) {
 			System.out.println("-1");
+			return;
+		}
 		Map<Character, Integer> tm = new TreeMap<Character, Integer>();
 		for (char c : s.toCharArray())
 			tm.put(c, tm.getOrDefault(c, 0) + 1);
